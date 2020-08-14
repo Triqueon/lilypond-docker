@@ -13,3 +13,5 @@ ADD https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.s
 RUN chmod +x lilypond-2.20.0-1.linux-64.sh
 RUN ./lilypond-2.20.0-1.linux-64.sh --batch --prefix /root/stable
 RUN rm lilypond-2.20.0-1.linux-64.sh
+
+ENV PATH /root/stable/bin:$PATH
