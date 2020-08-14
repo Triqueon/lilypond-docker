@@ -1,5 +1,5 @@
 FROM ubuntu
-LABEL "maintainer=pascal.stein@gmail.com"
+LABEL maintainer="pascal.stein@gmail.com"
 
 RUN apt-get update && apt-get install -y openssh-client git locales
 
