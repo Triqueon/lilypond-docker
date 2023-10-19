@@ -9,9 +9,6 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
 
-ADD https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh ./
-RUN chmod +x lilypond-2.20.0-1.linux-64.sh
-RUN ./lilypond-2.20.0-1.linux-64.sh --batch --prefix /root/stable
-RUN rm lilypond-2.20.0-1.linux-64.sh
-
-ENV PATH /root/stable/bin:$PATH
+ADD https://gitlab.com/lilypond/lilypond/-/releases/v2.24.2/downloads/lilypond-2.24.2-linux-x86_64.tar.gz ./
+RUN tar -xvzf lilypond-2.24.2-linux-x86_64.tar.gz
+ENV PATH /root/lilypond-2.24.2-linux-x86_64/bin/lilypond:$PATH
